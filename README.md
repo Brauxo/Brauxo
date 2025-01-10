@@ -1,0 +1,3 @@
+- 👋 hello everyone, I’m @Brauxo a Data Science Engineer from France
+- 👀 I’m interested in Deep learning and most things related to AI.
+- 💞️ I’m looking to collaborate on Advanced AI project.
