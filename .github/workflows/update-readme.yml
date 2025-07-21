@@ -9,6 +9,8 @@ on:
 jobs:
   update-papers:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check repo
         uses: actions/checkout@v4
