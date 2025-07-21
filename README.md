@@ -1,3 +1,59 @@
-- 👋 hello everyone, I’m @Brauxo a Data Science Engineer from France
-- 👀 I’m interested in Deep learning and most things related to AI.
-- 💞️ I’m looking to collaborate on Advanced AI project.
+# Hi, I'm Brauxo 👋
+
+<a href="https://www.linkedin.com/in/your-linkedin-profile">
+  <img align="right" alt="Brauxo's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+</a>
+<a href="mailto:your-email@example.com">
+  <img align="right" alt="Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />
+</a>
+
+<br/>
+
+A **Data Engineer** from France 🇫🇷 with a passion for building intelligent applications. I bridge the gap between Data Science research and production ready AI systems. I specialized in creating robust data pipelines and deploying machine learning models.
+
+- 🧠 **Exploring:** Advanced Deep Learning architectures and MLOps best practices.
+- 🚀 **Building:** End-to-end AI applications, from data ingestion to model deployment.
+- ☁️ **Cloud Expertise:** Proficient in designing and managing data solutions on **AWS** and **Azure**.
+- 💬 **Ask me about:** Python, Data Engineering, ETL/ELT, TensorFlow, or anything related to AI!
+
+---
+
+### 📊 My GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Brauxo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Brauxo's GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Brauxo&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
+</p>
+
+---
+
+### 🛠️ My Tech Stack
+
+Here are the technologies I work with:
+
+<p align="center">
+  <a href="https://www.python.org" target="_blank"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/> </a>
+  <a href="https://www.tensorflow.org" target="_blank"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/> </a>
+  <a href="https://pytorch.org/" target="_blank"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/> </a>
+  <a href="https://scikit-learn.org/" target="_blank"> <img src="https://img.shields.io/badge/scikit--learn-%23F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/> </a>
+  <a href="https://pandas.pydata.org/" target="_blank"> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/> </a>
+  <a href="https://www.docker.com/" target="_blank"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/> </a>
+  <br/>
+  <a href="https://aws.amazon.com" target="_blank"> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"/> </a>
+  <a href="https://azure.microsoft.com" target="_blank"> <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure"/> </a>
+  <a href="https://www.postgresql.org" target="_blank"> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/> </a>
+  <a href="https://spark.apache.org/" target="_blank"> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white" alt="Spark"/> </a>
+</p>
+
+---
+
+### 💡 My Latest AI/ML Readings
+
+<!--START_SECTION:blog-->
+<!-- This section will be automatically updated by a GitHub Action -->
+<!--END_SECTION:blog-->
+
+---
+
+### ⭐ My Pinned Projects
+
