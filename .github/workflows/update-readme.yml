@@ -21,5 +21,5 @@ jobs:
           comment_tag_name: "blog"
           feed_list: "http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CV&sortBy=lastUpdatedDate&sortOrder=descending&max_results=5"
           max_post_count: 5
-          template: "* [$title]($url) - _Published on $date_ \n"
-          date_format: "mmmm d, yyyy"
+          template: |
+            * [$title]($url) - _Published on $publish_date_
