@@ -58,9 +58,9 @@ Here are the technologies I work with:
 
 ### 💡 My Latest AI/ML Readings
 
-<!--START_SECTION:blog-->
-<!-- This section will be automatically updated by a GitHub Action -->
-<!--END_SECTION:blog-->
+<!-- blog:START -->
+<!-- This section is automatically updated by the CI/CD pipeline -->
+<!-- blog:END -->
 
 ---
 
