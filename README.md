@@ -67,9 +67,8 @@ Here are the technologies I work with:
 
 ### 💡 Today's Latest AI/ML Readings
 
-<!-- blog:START -->
-<!-- This section is automatically updated by the CI/CD pipeline -->
-<!-- blog:END -->
+<!--PAPERS_START-->
+<!--PAPERS_END-->
 
 ### ⭐ My Pinned Projects
 
