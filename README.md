@@ -34,6 +34,7 @@ A **Data Engineer** from France 🇫🇷 with a passion for building intelligent
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Brauxo&theme=tokyonight&row=1&column=7" alt="GitHub Trophies" />
 </p>
+
 ---
 
 ### 🛠️ My Tech Stack
@@ -62,7 +63,9 @@ Here are the technologies I work with:
   <a href="https://www.mongodb.com/" target="_blank"> <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/> </a>
 </p>
 
-### 💡 My Latest AI/ML Readings
+---
+
+### 💡 Today's Latest AI/ML Readings
 
 <!-- blog:START -->$start_list
 - [Franca: Nested Matryoshka Clustering for Scalable Visual Representation
