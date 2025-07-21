@@ -67,11 +67,9 @@ Here are the technologies I work with:
 
 ### 💡 Today's Latest AI/ML Readings
 
-<!-- blog:START -->* [Franca: Nested Matryoshka Clustering for Scalable Visual Representation
-  Learning](http://arxiv.org/abs/2507.14137v1)* [Toward Temporal Causal Representation Learning with Tensor Decomposition](http://arxiv.org/abs/2507.14126v1)* [Kolmogorov Arnold Networks &lpar;KANs&rpar; for Imbalanced Data -- An Empirical
-  Perspective](http://arxiv.org/abs/2507.14121v1)* [Harmony in Divergence: Towards Fast, Accurate, and Memory-efficient
-  Zeroth-order LLM Fine-tuning](http://arxiv.org/abs/2502.03304v2)* [A General Framework for Inference-time Scaling and Steering of Diffusion
-  Models](http://arxiv.org/abs/2501.06848v5)<!-- blog:END -->
+<!-- blog:START -->
+<!-- This section is automatically updated by the CI/CD pipeline -->
+<!-- blog:END -->
 
 ### ⭐ My Pinned Projects
 
