@@ -1,4 +1,4 @@
-name: Update the readme with Latest AI Papers
+name: Update the readme with Nasa picture of the Day
 
 on:
   schedule:
