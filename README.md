@@ -65,7 +65,7 @@ Here are the technologies I work with:
 
 ---
 
-### 💡 Today's Latest AI/ML Readings
+### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
 <!--NASA_PICTURE_END-->
