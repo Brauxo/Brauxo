@@ -1,20 +1,11 @@
-# Hi, I'm Brauxo 👋
+# Welcome to my profile 
 
-<a href="https://www.linkedin.com/in/your-linkedin-profile">
-  <img align="right" alt="Brauxo's LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
-</a>
-<a href="mailto:your-email@example.com">
-  <img align="right" alt="Email" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/gmail.svg" />
-</a>
+Hey, I am Brauxo, a **Data Engineer** from France 🇫🇷 with a passion for building intelligent applications. I bridge the gap between Data Science research and production ready AI systems. I specialized in creating robust data pipelines and deploying machine learning models.
 
-<br/>
-
-A **Data Engineer** from France 🇫🇷 with a passion for building intelligent applications. I bridge the gap between Data Science research and production ready AI systems. I specialized in creating robust data pipelines and deploying machine learning models.
-
-- 🧠 **Exploring:** Advanced Deep Learning architectures and MLOps best practices.
-- 🚀 **Building:** End-to-end AI applications, from data ingestion to model deployment.
-- ☁️ **Cloud Expertise:** Proficient in designing and managing data solutions on **AWS** and **Azure**.
-- 💬 **Ask me about:** Python, Data Engineering, ETL/ELT, TensorFlow, or anything related to AI!
+- **Exploring:** Advanced Deep Learning architectures and MLOps best practices.
+- **Building:** End-to-end AI applications, from data ingestion to model deployment.
+- **Cloud Expertise:** Proficient in designing and managing data solutions on **AWS** and **Azure**.
+- **Ask me about:** Python, Data Engineering, ETL/ELT, TensorFlow, or anything related to AI!
 
 ---
 
