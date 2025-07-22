@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Manual
 
 jobs:
-  update-papers:
+  update-nasa:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -21,13 +21,15 @@ jobs:
           python-version: '3.10'
 
       - name: Install dependencies
-        run: pip install feedparser
+        run: pip install requests
 
       - name: Run Python script 
-        run: python update_papers.py
+        env:
+          NASA_API_KEY: ${{secrets.NASA_API}}
+        run: python update_nasa.py
 
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "CI: Update latest AI/ML papers"
+          commit_message: "schedule : new Nasa picture"
           file_pattern: README.md
