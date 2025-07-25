@@ -9,25 +9,6 @@ Hey, I am Brauxo, a **Data Engineer** from France 🇫🇷 with a passion for bu
 
 ---
 
-### 📊 My GitHub Stats
-
-<p align="center">
-  <table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=Brauxo&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Brauxo's GitHub Stats" />
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Brauxo&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Brauxo&theme=tokyonight&row=1&column=7" alt="GitHub Trophies" />
-</p>
-
----
-
 ### 🛠️ My Tech Stack
 
 Here are the technologies I work with:

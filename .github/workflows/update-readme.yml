@@ -2,8 +2,9 @@ name: Update the readme with Nasa picture of the Day
 
 on:
   schedule:
-    # every day
-    - cron: '12 0 * * *'
+    # two times a day
+    - cron: '0 4 * * *'
+    - cron: '0 16 * * *'
   workflow_dispatch: # Manual
 
 jobs:
