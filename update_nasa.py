@@ -20,21 +20,36 @@ def fetch_nasa():
 
 def format_readme(data):
     if not data:
-        return "API is down and Could not retrieve the Picture of the Day. Contact me if you see this message."
+        return "Could not retrieve the Picture of the Day. Please check back tomorrow."
 
     title = data.get("title", "No Title Available")
     explanation = data.get("explanation", "No explanation available.")
-    
-    # IF video
-    if data.get("media_type") == "image":
-        image_url = data.get("hdurl") or data.get("url")
-        image_tag = f"![{title}]({image_url})"
-    else:
-        # Link if video
-        video_url = data.get("url")
-        image_tag = f"[Click here to watch the video of the day]({video_url})"
+    media_type = data.get("media_type")
 
-    # cleanup
+    if media_type == "image":
+        image_url = data.get("hdurl") or data.get("url")
+        if image_url:
+            image_tag = f"![{title}]({image_url})"
+        else:
+            image_tag = "An image was expected, but the URL was missing."
+    else:
+        # handle other media types (like video)
+        direct_url = data.get("url")
+        
+        if direct_url:
+            # If a direct URL is provided
+            image_tag = f"#### [Click here to view today's content]({direct_url})"
+        else:
+            # Build a link to page for that day
+            apod_date = data.get("date", "") 
+            if apod_date:
+                date_parts = apod_date.split('-')
+                formatted_date = f"{date_parts[0][2:]}{date_parts[1]}{date_parts[2]}"
+                fallback_url = f"https://apod.nasa.gov/apod/ap{formatted_date}.html"
+                image_tag = f"#### [Click here to see the content on the APOD website]({fallback_url})"
+            else:
+                image_tag = "Content is available, but the link could not be determined."
+
     explanation_oneline = ' '.join(explanation.splitlines())
     
     return (
