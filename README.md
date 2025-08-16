@@ -40,9 +40,7 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### A Cool GIF of a 2025 Perseid
-![A Cool GIF of a 2025 Perseid](https://apod.nasa.gov/apod/image/2508/perseid2025-cropped.gif)
-> The camera battery died about 2am local time on August 12, while shooting in the bright moonlit skies from a garden in Chastre, Brabant Wallon, Belgium, planet Earth. But not before it captured the frames used to compose this cool animated gif of a brilliant Perseid meteor and a lingering visible trail known as a persistent train. The Perseid meteor, a fast moving speck of dust from the tail of large periodic Comet Swift-Tuttle, was heated to incandescence by ram pressure and vaporized as it flashed through the upper atmosphere at 60 kilometers per second. Compared to the brief flash of the meteor, its wraith-like trail really is persistent. A characteristic of bright meteors, a smoke-like persistent train can often be followed for many minutes wafting in the winds at altitudes of 60 to 90 kilometers.
+Could not retrieve the Picture of the Day. Please check back tomorrow.
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
