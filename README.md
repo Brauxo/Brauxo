@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### A Dark Veil in Ophiuchus
-![A Dark Veil in Ophiuchus](https://apod.nasa.gov/apod/image/2508/DarkVeil_v2p2048.jpeg)
-> The diffuse hydrogen-alpha glow of emission region Sh2-27 fills this cosmic scene. The field of view spans nearly 3 degrees across the nebula-rich constellation Ophiuchus toward the central Milky Way. A Dark Veil of wispy interstellar dust clouds draped across the foreground is chiefly identified as LDN 234 and LDN 204 from the 1962 Catalog of Dark Nebulae by American astronomer Beverly Lynds. Sh2-27 itself is the large but faint HII region surrounding runaway O-type star Zeta Ophiuchi. Along with the Zeta Oph HII region, LDN 234 and LDN 204 are likely 500 or so light-years away. At that distance, this telescopic frame would be about 25 light-years wide.
+#### A Two Percent Moon
+![A Two Percent Moon](https://apod.nasa.gov/apod/image/2508/IMG_4081.jpeg)
+> A young crescent moon can be hard to see. That's because when the Moon shows it's crescent phase (young or old) it can never be far from the Sun in planet Earth's sky. And even though the sky is still bright, a slender sunlit lunar crescent is cleary visible in this early evening skyscape. The telephoto snapshot was captured on August 24, with the Moon very near the western horizon at sunset. Seen in a narrow crescent phase about 1.5 days old, the visible sunlit portion is a mere two percent of the surface of the Moon's familiar nearside. At the Canary Islands Space Centre, a steerable radio dish for communication with spacecraft is titled in the direction of the two percent Moon. The sunset sky's pastel pinkish coloring is partly due to fine sand and dust from the Sahara Desert blown by the prevailing winds.
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
