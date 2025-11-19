@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### The Galactic Plane: Radio Versus Visible
-#### [Click here to see the content on the APOD website](https://apod.nasa.gov/apod/ap251118.html)
-> What does the Milky Way look like in radio waves? To better find out, GLEAM surveyed the central band of our galaxy in high resolution radio light as imaged by the Murchison Widefield Array in Australia.  As the featured video slowly scrolls, radio light (71 - 231 MHz) is seen on the left and visible light -- from the same field -- on the right. Differences are so great because most objects glow differently in radio and visible light, and because visible light is stopped by nearby interstellar dust. These differences are particularly apparent in the direction toward the center of our galaxy, seen about a third of the way through.  Among the many features that appear in the radio, bright red patches are usually supernova remnants of exploded stars, while areas colored blue are stellar nurseries filled with bright young stars.    Did you know: APOD is available from numerous sites, including social media?
+#### Chamaeleon Dark Nebulas
+![Chamaeleon Dark Nebulas](https://apod.nasa.gov/apod/image/2511/Chamaeleon_Houbo_3691.jpg)
+> Sometimes the dark dust of interstellar space has an angular elegance.  Such is the case toward the far-south constellation of Chamaeleon. Normally too faint to see, dark dust is best known for blocking visible light from stars and galaxies behind it. In this 11.4-hour exposure, however, the dust is seen mostly in light of its own, with its strong red and near-infrared colors creating a brown hue. Contrastingly blue, a bright star Beta Chamaeleontis is visible on the upper right of the V, with the dust that surrounds it preferentially reflecting blue light from its primarily blue-white color.  All of the pictured stars and dust occur in our own Milky Way Galaxy with one notable exception: a white spot just below Beta Chamaeleontis is the galaxy IC 3104, which lies far in the distance.  Interstellar dust is mostly created in the cool atmospheres of giant stars and dispersed into space by stellar light, stellar winds, and stellar explosions such as supernovas.
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
