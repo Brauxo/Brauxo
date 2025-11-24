@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### The Observable Universe
-![The Observable Universe](https://apod.nasa.gov/apod/image/2511/ObsUni_WikipediaPablo_2100.jpg)
-> How far can you see? Everything you can see, and everything you could possibly see, right now, assuming your eyes could detect all types of radiations around you -- is the observable universe.  In light, the farthest we can see comes from the cosmic microwave background, a time 13.8 billion years ago when the universe was opaque like thick fog. Some neutrinos and gravitational waves that surround us come from even farther out, but humanity does not yet have the technology to detect them. The featured image illustrates the observable universe on an increasingly compact scale, with the Earth and Sun at the center surrounded by our Solar System, nearby stars, nearby galaxies, distant galaxies, filaments of early matter, and the cosmic microwave background. Cosmologists typically assume that our observable universe is just the nearby part of a greater entity known as "the universe" where the same physics applies.  However, there are several lines of popular but speculative reasoning that assert that even our universe is part of a greater multiverse where either different physical constants occur, different physical laws apply, higher dimensions operate, or slightly different-by-chance versions of our standard universe exist.   Explore the Observable Universe: Random APOD Generator
+#### Apep: Unusual Dust Shells from Webb
+![Apep: Unusual Dust Shells from Webb](https://apod.nasa.gov/apod/image/2511/ApepStars_webb_960.jpg)
+> What created this unusual space sculpture? Stars. This unusual system of swirls and shells, known as Apep, was observed in unprecedented detail by NASA’s James Webb Space Telescope in infrared light in 2024. Observations indicate that the unusual shape originates from two massive Wolf-Rayet stars orbiting each other every 190 years with each close passes causing a new shell of dust and gas to be expelled. Holes in these shells are thought to be caused by a third orbiting star. This stellar dust dance will likely continue for hundreds of thousands of years, possibly ending only when one of the massive stars runs out of internal nuclear fuel and explodes in a supernova punctuated by a burst of gamma-rays.   Build your own star system: Astronomy Puzzle of the Day
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
