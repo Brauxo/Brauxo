@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### Orion: The Running Man Nebula
-![Orion: The Running Man Nebula](https://apod.nasa.gov/apod/image/2602/RunningMan_Lyons_3298.jpg)
-> What part of Orion is this? Just north of the famous Orion Nebula is a picturesque star forming region in Orion's Sword that contains a lot of intricate dust -- some of which appears blue because it reflects the light of bright embedded stars.  The region's popular name is the Running Man Nebula because, looked at from the right, part of the brown dust appears to be running legs.  Cataloged as Sharpless 279, the reflection nebula is not only part of the constellation of Orion, but part of the greater Orion molecular cloud complex.  Light from the Running Man's bright stars, including 42 Orionis, the bright star closest to the featured image center, is slowly destroying and reshaping the surrounding dust, which will likely be completely gone in about 10 million years.  The nebula spans about 15 light years and lies about 1,500 light years away.   Jigsaw Nebula: Astronomy Puzzle of the Day
+#### Red Spider Planetary Nebula from Webb
+![Red Spider Planetary Nebula from Webb](https://apod.nasa.gov/apod/image/2602/RedSpider_Webb_1280.jpg)
+> Oh what a tangled web a planetary nebula can weave.  The Red Spider Planetary Nebula shows the complex structure that can result when a normal star ejects its outer gases and becomes a white dwarf star. Officially tagged NGC 6537, this two-lobed symmetric planetary nebula houses one of the hottest white dwarfs ever observed, probably as part of a binary star system.  Internal winds flowing out from the central stars, have been measured in excess of 1,000 kilometers per second. These winds expand the nebula, flow along the nebula's walls, and cause waves of hot gas and dust to collide.  Atoms caught in these colliding shocks radiate light shown in the featured false-color infrared picture by the James Webb Space Telescope.  The Red Spider Nebula lies toward the constellation of the Archer (Sagittarius).  Its distance is not well known but has been estimated by some to be about 4,000 light-years.
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
