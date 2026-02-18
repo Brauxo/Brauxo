@@ -40,9 +40,9 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### Tails of Comet Wierzchoś
-![Tails of Comet Wierzchoś](https://apod.nasa.gov/apod/image/2602/Wierzchos_Chabo_1280.jpg)
-> Some comets are regular guests of our solar neighborhood; others come by only once, never to return.  We won’t have another chance to see Comet C/2024 E1 (Wierzchoś), which is currently making its way through the inner Solar System.  The hyperbolic orbit of this comet indicates that it will likely become an interstellar traveler.  Comet Wierzchoś is today near its closest approach to the Earth, passing roughly the same distance from the Earth as is the Sun.  The featured 30-minute exposure was taken last week in Chile and shows a 5-degree long ion tail as well as three shorter dust tails.  The green hue of the coma comes from the breakdown of dicarbon molecules by sunlight, but that process does not last long enough to also tinge the tails.  On the far right lies a spiral galaxy far in the distance: NGC 300.
+#### Orion's Cradle
+![Orion's Cradle](https://apod.nasa.gov/apod/image/2602/OrionBarnard_Czerski_3000.jpg)
+> Cradled in red-glowing hydrogen gas, stars are being born in Orion.  These stellar nurseries lie at the edge of the giant Orion molecular cloud complex, some 1,500 light-years away.  This detailed view spans about 12 degrees across the center of the well-known constellation, with the Great Orion Nebula, the closest large star-forming region, visible toward the lower right.  The deep mosaic also includes, near the top center, the Flame Nebula and the Horsehead Nebula.  Image data acquired with a hydrogen-alpha filter adds other remarkable features to this wide-angle cosmic vista: pervasive tendrils of energized atomic hydrogen gas and portions of the surrounding Barnard's Loop. While the Orion Nebula and many stars in Orion are easy to see with the unaided eye, emission from the extensive interstellar gas is faint and much harder to record, even in telescopic views of the nebula-rich complex.   Sky Surprise: What picture did APOD feature on your birthday? (after 1995)
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
