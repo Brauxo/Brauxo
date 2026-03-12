@@ -40,9 +40,7 @@ Here are the technologies I work with:
 ### 🔭 NASA picture of the day ! 
 
 <!--NASA_PICTURE_START-->
-#### CG 4: The Globule and the Galaxy
-![CG 4: The Globule and the Galaxy](https://apod.nasa.gov/apod/image/2603/cg4.jpg)
-> Is this a cosmic monster ready to devour an unsuspecting galaxy? Thankfully, that is not the case. The red “monster” shown in the featured image is Cometary Globule CG 4, 1,300 light-years away in the Constellation Puppis. CG 4 is a molecular cloud, where hydrogen becomes cold enough to form molecules that can be brought together by gravity to create stars. The shape of CG 4 resembles that of a comet, but its head is 1.5 light-year in diameter and its tail is 8 light-years long; for comparison, the distance from the Earth to the sun is only 8 light-minutes. Astronomers believe that the tail of a cometary globule could have been shaped by a nearby supernova explosion or by irradiation from hot, massive stars. Indeed, CG 4 and other nearby globules point away from the Vela Supernova Remnant, at the center of the Gum Nebula. The edge-on spiral galaxy, ESO 257-19, is more than a hundred million light-years beyond CG 4, and is completely safe from the “monster”.
+Could not retrieve the Picture of the Day. Please check back tomorrow.
 <!--NASA_PICTURE_END-->
 
 ### ⭐ My Pinned Projects
