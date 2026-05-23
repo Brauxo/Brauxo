@@ -60,6 +60,15 @@
 <!--QA_START-->
 ```text
 >_ [QUERY_LOG] :: @Brauxo
+[?] QUESTION : Detail Owen Braux's specific focus within the Artificial Intelligence and Data Engineering fields.
+[!] RESPONSE : QUERY PROCESSED.
+Owen Braux's core focus is on practical Artificial Intelligence, specifically implementing Machine Learning, Deep Learning, and LLMs for applications such as local AI assistants and computer vision systems. He also specializes in Data Engineering, architecting robust data platforms utilizing cloud infrastructures like GCP, AWS, and advanced tooling including Terraform, Docker, and dbt. This dual expertise centers on developing intelligent systems and the scalable data foundations required to power them.
+```
+
+<!--QA_SEP-->
+
+```text
+>_ [QUERY_LOG] :: @Brauxo
 [?] QUESTION : What is Owen's preferred methodology for deploying Machine Learning models and Data pipelines? Detail the Cloud infrastructure used.
 [!] RESPONSE : Owen's preferred methodology for deploying Machine Learning models and data pipelines emphasizes containerization, orchestration, and infrastructure-as-code. He leverages Docker, Kubernetes (K8s), and Terraform across Cloud infrastructure, prominently featuring GCP services like BigQuery, alongside AWS. Data pipelines are engineered using tools such as dbt and PySpark for robust transformation and warehousing.
 ```
