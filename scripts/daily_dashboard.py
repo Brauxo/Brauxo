@@ -1,5 +1,6 @@
 import os
 import requests
+import datetime
 import re
 import json
 from dotenv import load_dotenv
@@ -91,6 +92,8 @@ def generate_briefing(news, weather, activity):
     else:
         ai_text = res.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
     
+    current_date = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+    
     dashboard_ui = f"""
 <div align="center">
   <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00&color=black" />
@@ -101,6 +104,7 @@ def generate_briefing(news, weather, activity):
 
 ```text
 >_ RUNNING SYSTEM DIAGNOSTICS...
+[+] SYS     :: Core Date      :: {current_date}
 [+] ENV     :: Open-Meteo API :: {weather}
 [+] DEV     :: GitHub REST    :: {activity}
 [+] FEED    :: HackerNews API :: Sync Complete
