@@ -1,7 +1,7 @@
 name: System Query (AI Terminal)
 
 description: "Submit a query to Brauxo's Core AI"
-title: "Query: "
+title: "[SYSTEM_QUERY] AI Terminal Execution"
 labels: question, ai-chat
 body:
   - type: markdown

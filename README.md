@@ -51,7 +51,7 @@
 
 <div align="center">
   <p><code>Execute query regarding public projects, AI focus, or Data Stack.</code></p>
-  <a href="https://github.com/Brauxo/Brauxo/issues/new?template=ask-ai.yml&title=Query:">
+  <a href="https://github.com/Brauxo/Brauxo/issues/new?template=ask-ai.yml">
     <img src="https://img.shields.io/badge/%3E__EXECUTE_QUERY()-00ff00?style=for-the-badge&logo=terminal&logoColor=000000&color=black" />
   </a>
 </div>
