@@ -2,7 +2,7 @@ name: AI Chat Handler
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [opened]
 
 permissions:
   issues: write

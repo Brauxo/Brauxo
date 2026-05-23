@@ -58,14 +58,5 @@
 <br>
 
 <!--QA_START-->
-> **@Brauxo** asked: *"### >> ENTER_QUERY
-
-Scan system records and extract Owen Braux's primary tech stack and core competencies."*  
-> **AI:** SYSTEM QUERY INITIATED.
-SCANNING PROTOCOL COMPLETE.
-Owen Braux's primary focus encompasses Artificial Intelligence, Machine Learning, and the development of robust Data Platforms. His core competencies are anchored in Python, Deep Learning, LLMs, GCP, AWS, Terraform, Docker, K8s, dbt, PySpark, and BigQuery. These skills are actively applied in projects involving local AI assistants and advanced computer vision systems.
-> ---
-
 > *> No recent queries logged in system memory.*
-> ---
 <!--QA_END-->

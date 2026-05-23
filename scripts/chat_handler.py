@@ -107,6 +107,15 @@ def close_issue():
     requests.patch(url, headers=headers, json=data)
 
 def update_readme_qa(question, answer):
+    # 1. Clean the question (remove Markdown titles from the issue form)
+    clean_q_lines = []
+    for line in question.split('\n'):
+        line = line.strip()
+        if not line or "ENTER_QUERY" in line or "Syntax check" in line or "Private data" in line:
+            continue
+        clean_q_lines.append(line)
+    clean_question = " ".join(clean_q_lines)
+    
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
         
@@ -117,25 +126,22 @@ def update_readme_qa(question, answer):
     match = pattern.search(content)
     if match:
         current_qa = match.group(1).strip()
-        # Parse existing QAs (assuming blockquotes)
-        lines = [line for line in current_qa.split('\n') if line.strip() != "" and "No questions yet" not in line]
         
-        # We will format QAs as a blockquote
-        new_entry = f"> **@{ISSUE_AUTHOR}** asked: *\"{question}\"*  \n> **AI:** {answer}  \n> ---\n"
+        # 3. Create the new QA block in Terminal style
+        new_block = f"```text\n>_ [QUERY_LOG] :: @{ISSUE_AUTHOR}\n[?] QUESTION : {clean_question}\n[!] RESPONSE : {answer}\n```"
         
-        # Simple extraction by blocks separated by "---"
-        blocks = current_qa.split("> ---")
-        clean_blocks = [b.strip() for b in blocks if b.strip() and "No questions yet" not in b]
+        # 4. Extract existing blocks
+        blocks = current_qa.split("<!--QA_SEP-->")
+        clean_blocks = [b.strip() for b in blocks if "[QUERY_LOG]" in b]
         
-        clean_blocks.insert(0, f"> **@{ISSUE_AUTHOR}** asked: *\"{question}\"*  \n> **AI:** {answer}")
+        # 5. Add new block at the beginning
+        clean_blocks.insert(0, new_block)
         
-        # Keep only the last 5
+        # 6. Keep only the last 5
         clean_blocks = clean_blocks[:5]
         
-        new_qa_section = "\n> ---\n\n".join(clean_blocks)
-        if new_qa_section:
-             new_qa_section += "\n> ---"
-             
+        new_qa_section = "\n\n<!--QA_SEP-->\n\n".join(clean_blocks)
+        
         new_content = f"{start_marker}\n{new_qa_section}\n{end_marker}"
         updated_readme = pattern.sub(new_content, content)
         
