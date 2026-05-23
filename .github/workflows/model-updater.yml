@@ -1,0 +1,46 @@
+name: Gemini Model Auto-Updater
+
+on:
+  schedule:
+    - cron: '0 2 1 * *' # 1st of every month at 2:00 AM UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install python-dotenv requests
+
+      - name: Check for new models
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/update_gemini_models.py
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "[SYSTEM_MAINTENANCE] :: Upgrade to latest Gemini models"
+          title: "🤖 Auto-Update: New Gemini Model Available"
+          body: |
+            ## System Maintenance: AI Core Upgrade
+            The autonomous model scanner has detected that a newer stable version of the Gemini Flash API is available on Google's servers.
+            
+            This PR automatically upgrades the `chat_handler.py` and `daily_dashboard.py` cores to the latest API endpoints to prevent decommissioning faults.
+            
+            > **Review and merge to execute upgrade.**
+          branch: chore/update-gemini-models
+          labels: maintenance, auto-pr
