@@ -45,10 +45,14 @@ def update_file(filepath, latest_flash, latest_lite):
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read()
         
-        # Replace gemini-X.Y-flash:generateContent
+        # Replace API endpoints
         new_content = re.sub(r"gemini-\d+\.\d+-flash(?=:generateContent)", latest_flash, content)
-        # Replace gemini-X.Y-flash-lite:generateContent
         new_content = re.sub(r"gemini-\d+\.\d+-flash-lite(?=:generateContent)", latest_lite, new_content)
+        
+        # Replace UI Badges (e.g. AGENT-GEMINI_3.1-8A2BE2)
+        # We extract the number from the latest_lite model (e.g. "gemini-3.5-flash-lite" -> "3.5")
+        lite_version = re.search(r"gemini-(\d+\.\d+)", latest_lite).group(1)
+        new_content = re.sub(r"AGENT-GEMINI_\d+\.\d+-8A2BE2", f"AGENT-GEMINI_{lite_version}-8A2BE2", new_content)
         
         if new_content != content:
             with open(filepath, "w", encoding="utf-8") as f:
