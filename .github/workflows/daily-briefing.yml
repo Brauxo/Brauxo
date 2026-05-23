@@ -1,0 +1,36 @@
+name: God Mode Daily Briefing
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # Every day at 8:00 AM UTC
+  workflow_dispatch: # Allows manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  update-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install python-dotenv requests google-generativeai
+
+      - name: Run Dashboard Engine
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/daily_dashboard.py
+
+      - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "[SYSTEM_UPDATE] :: Daily Intelligence Briefing"
+          file_pattern: README.md

@@ -1,49 +1,62 @@
-# Welcome to my profile 
+<div align="center">
+<pre>
+    ____  ____  ___   __  ___  ______
+   / __ )/ __ \/   | / / / / |/ / __ \ 
+  / __  / /_/ / /| |/ / / /|   / / / / 
+ / /_/ / _, _/ ___ / /_/ //   / /_/ /  
+/_____/_/ |_/_/  |_\____//_/|_\____/   
+                                       
+:: INITIALIZING SYSTEM KERNEL ::
+</pre>
+</div>
 
-Hey, I am Brauxo, a **Data Engineer** from France 🇫🇷 with a passion for building intelligent applications. I bridge the gap between Data Science research and production ready AI systems. I specialized in creating robust data pipelines and deploying machine learning models.
+<div align="center">
+  <code>[ IDENTITY: OWEN BRAUX ]</code><br>
+  <code>[ FOCUS: AI / ML / DATA PLATFORM ]</code>
+</div>
+<br>
 
-- **Exploring:** Advanced Deep Learning architectures and MLOps best practices.
-- **Building:** End-to-end AI applications, from data ingestion to model deployment.
-- **Cloud Expertise:** Proficient in designing and managing data solutions on **AWS** and **Azure**.
-- **Ask me about:** Python, Data Engineering, ETL/ELT, TensorFlow, or anything related to AI!
+<h2 align="center">:: AUTONOMOUS_AI_DASHBOARD ::</h2>
+<div align="center"><i>[ System synchronized via Gemini ]</i></div>
+<br>
+
+<!--AI_DASHBOARD_START-->
+<div align="center">
+  <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00&color=black" />
+  <img src="https://img.shields.io/badge/AGENT-GEMINI_3.1-8A2BE2?style=for-the-badge&logo=google-gemini&logoColor=8A2BE2&color=black" />
+</div>
+
+<br>
+
+```text
+>_ RUNNING SYSTEM DIAGNOSTICS...
+[+] ENV     :: Open-Meteo API :: METEO_API_OFFLINE
+[+] DEV     :: GitHub REST    :: SYNC_OFFLINE (Token Unlinked)
+[+] FEED    :: HackerNews API :: Sync Complete
+```
+
+<br>
+
+### [ INTELLIGENCE_BRIEFING ]
+**>_ [GLOBAL_SCAN]**
+> [ AWAITING CRON_SYNC_TICK ]
+
+**>_ [LOCAL_SYNERGY]**
+> [ AWAITING CRON_SYNC_TICK ]
+<!--AI_DASHBOARD_END-->
 
 ---
 
-### 🛠️ My Tech Stack
+<h2 align="center">:: TERMINAL_ACCESS // QUERY_CORE ::</h2>
 
-Here are the technologies I work with:
+<div align="center">
+  <p><code>Execute query regarding public projects, AI focus, or Data Stack.</code></p>
+  <a href="https://github.com/Brauxo/Brauxo/issues/new?template=ask-ai.md&title=Question+for+AI:">
+    <img src="https://img.shields.io/badge/%3E__EXECUTE_QUERY()-00ff00?style=for-the-badge&logo=terminal&logoColor=000000&color=black" />
+  </a>
+</div>
+<br>
 
-<p align="center">
-  <!-- Languages -->
-  <a href="https://www.python.org" target="_blank"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/> </a>
-  <a href="https://www.java.com" target="_blank"> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/> </a>
-  <a href="https://www.r-project.org/" target="_blank"> <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R"/> </a>
-  <a href="https://godotengine.org/" target="_blank"> <img src="https://img.shields.io/badge/GDScript-478CB0?style=for-the-badge&logo=godot-engine&logoColor=white" alt="GDScript"/> </a>
-  <br/>
-  <!-- DATA/ML -->
-  <a href="https://www.tensorflow.org" target="_blank"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"/> </a>
-  <a href="https://pytorch.org/" target="_blank"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch"/> </a>
-  <a href="https://scikit-learn.org/" target="_blank"> <img src="https://img.shields.io/badge/scikit--learn-%23F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-learn"/> </a>
-  <a href="https://pandas.pydata.org/" target="_blank"> <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/> </a>
-  <a href="https://spark.apache.org/" target="_blank"> <img src="https://img.shields.io/badge/Apache%20Spark-E25A1C?style=for-the-badge&logo=apache-spark&logoColor=white" alt="Spark"/> </a>
-  <br/>
-  <!-- Devops -->
-  <a href="https://aws.amazon.com" target="_blank"> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS"/> </a>
-  <a href="https://azure.microsoft.com" target="_blank"> <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white" alt="Azure"/> </a>
-  <a href="https://www.docker.com/" target="_blank"> <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/> </a>
-  <a href="https://www.postgresql.org" target="_blank"> <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/> </a>
-  <a href="https://www.mongodb.com/" target="_blank"> <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/> </a>
-</p>
-
----
-
-### 🔭 NASA picture of the day ! 
-
-<!--NASA_PICTURE_START-->
-#### Collision at Asteroid Dimorphos
-#### [Click here to see the content on the APOD website](https://apod.nasa.gov/apod/ap250728.html)
-> Why was this collision so strange? In 2022, to develop Earth-saving technology, NASA deliberately crashed the DART spacecraft into the asteroid moonlet Dimorphos. The hope was that this collision would alter the trajectory of Dimorphos around its parent asteroid Didymos and so demonstrate that similar collisions could, in theory, save the Earth from being hit by (other) hazardous asteroids.  But analyses of new results show that the effects of the collision are different than expected -- and we are trying to understand why.  Featured here is the time lapse video taken by the ejected LICIACube camera LUKE showing about 250 seconds of the expanding debris field of Dimorphos after the collision, with un-impacted Didymos passing in the foreground.  In 2026, Europe's Hera mission will reach the asteroids and release three spacecraft to better study the matter.
-<!--NASA_PICTURE_END-->
-
-### ⭐ My Pinned Projects
-
+<!--QA_START-->
+> *> No recent queries logged in system memory.*
+<!--QA_END-->
