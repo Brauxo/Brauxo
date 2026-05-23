@@ -4,6 +4,7 @@ import datetime
 import re
 import json
 from dotenv import load_dotenv
+from config import MODEL_DASHBOARD
 
 load_dotenv()
 
@@ -82,7 +83,7 @@ def generate_briefing(news, weather, activity):
     > [1 sentence analyzing the Paris weather forecast and making a clever, Cyberpunk/Tech analogy (e.g., "Optimal GPU cooling conditions", "High thermal readings require underclocking", or "Clear skies optimize satellite telemetry").]
     """
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_DASHBOARD}:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     headers = {"Content-Type": "application/json"}
     
@@ -94,10 +95,16 @@ def generate_briefing(news, weather, activity):
     
     current_date = datetime.datetime.utcnow().strftime('%Y-%m-%d')
     
+    # Extract version from model string for the badge (e.g. gemini-3.1-flash-lite -> 3.1)
+    try:
+        badge_version = re.search(r"gemini-(\d+\.\d+)", MODEL_DASHBOARD).group(1)
+    except Exception:
+        badge_version = "X.X"
+        
     dashboard_ui = f"""
 <div align="center">
   <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00&color=black" />
-  <img src="https://img.shields.io/badge/AGENT-GEMINI_3.1-8A2BE2?style=for-the-badge&logo=google-gemini&logoColor=8A2BE2&color=black" />
+  <img src="https://img.shields.io/badge/AGENT-GEMINI_{badge_version}-8A2BE2?style=for-the-badge&logo=google-gemini&logoColor=8A2BE2&color=black" />
 </div>
 
 <br>

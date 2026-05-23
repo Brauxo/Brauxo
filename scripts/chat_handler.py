@@ -5,6 +5,7 @@ import json
 import datetime
 import google.generativeai as genai
 from dotenv import load_dotenv
+from config import MODEL_CHAT
 
 load_dotenv()
 
@@ -74,8 +75,7 @@ Core Skills: Python, Machine Learning, Deep Learning, LLMs, GCP, AWS, Terraform,
     4. Do not use emojis, use a cold, precise, "cyberpunk" tone.
     5. Reply in the same language as the question (French or English).
     """
-    
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_CHAT}:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     headers = {"Content-Type": "application/json"}
     
