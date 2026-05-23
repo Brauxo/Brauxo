@@ -58,5 +58,9 @@
 <br>
 
 <!--QA_START-->
-> *> No recent queries logged in system memory.*
+```text
+>_ [QUERY_LOG] :: @Brauxo
+[?] QUESTION : What is Owen's preferred methodology for deploying Machine Learning models and Data pipelines? Detail the Cloud infrastructure used.
+[!] RESPONSE : Owen's preferred methodology for deploying Machine Learning models and data pipelines emphasizes containerization, orchestration, and infrastructure-as-code. He leverages Docker, Kubernetes (K8s), and Terraform across Cloud infrastructure, prominently featuring GCP services like BigQuery, alongside AWS. Data pipelines are engineered using tools such as dbt and PySpark for robust transformation and warehousing.
+```
 <!--QA_END-->
