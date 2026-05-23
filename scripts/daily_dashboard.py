@@ -28,9 +28,21 @@ def get_hn_news():
 
 def get_weather():
     try:
-        res = requests.get("https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&current_weather=true").json()
-        current = res["current_weather"]
-        return f"{current['temperature']}°C (Wind: {current['windspeed']}km/h)"
+        url = "https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&daily=temperature_2m_max,temperature_2m_min,weathercode&timezone=Europe%2FParis"
+        res = requests.get(url).json()
+        daily = res["daily"]
+        t_max = daily["temperature_2m_max"][0]
+        t_min = daily["temperature_2m_min"][0]
+        code = daily["weathercode"][0]
+        
+        weather_codes = {
+            0: "Clear sky", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+            45: "Fog", 48: "Depositing rime fog", 51: "Light drizzle", 53: "Moderate drizzle", 
+            55: "Dense drizzle", 61: "Slight rain", 63: "Moderate rain", 65: "Heavy rain",
+            71: "Slight snow", 73: "Moderate snow", 75: "Heavy snow", 95: "Thunderstorm"
+        }
+        desc = weather_codes.get(code, "Unknown conditions")
+        return f"{t_min}°C to {t_max}°C, {desc}"
     except Exception:
         return "METEO_API_OFFLINE"
 
@@ -56,7 +68,7 @@ def generate_briefing(news, weather, activity):
     
     Context: Owen is deeply passionate about Artificial Intelligence, Machine Learning, and building scalable Data Platforms. He builds robust systems using Python, GCP, AWS, Terraform, K8s, PySpark, and dbt. His projects include a Bitcoin Analytics pipeline, an XGBoost Kaggle model, and a CNN for vision. DO NOT mention his current or past employers, internships, or any personal details outside of his technical passions.
     
-    Task: Write a highly stylized, 2-section markdown briefing.
+    Task: Write a highly stylized, 3-section markdown briefing.
     Format exactly like this (replace bracketed text):
     
     **>_ [GLOBAL_SCAN]**
@@ -64,6 +76,9 @@ def generate_briefing(news, weather, activity):
     
     **>_ [LOCAL_SYNERGY]**
     > [1-2 sentences relating the news or telemetry to Owen's passion for AI or his cloud skills in a cold, precise cyberpunk tone]
+
+    **>_ [ENV_ANALYSIS]**
+    > [1 sentence analyzing the Paris weather forecast and making a clever, Cyberpunk/Tech analogy (e.g., "Optimal GPU cooling conditions", "High thermal readings require underclocking", or "Clear skies optimize satellite telemetry").]
     """
     
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key={GEMINI_API_KEY}"
