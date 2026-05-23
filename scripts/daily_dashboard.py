@@ -4,7 +4,7 @@ import datetime
 import re
 import json
 from dotenv import load_dotenv
-from config import MODEL_DASHBOARD
+from config import MODEL
 
 load_dotenv()
 
@@ -83,7 +83,7 @@ def generate_briefing(news, weather, activity):
     > [1 sentence analyzing the Paris weather forecast and making a clever, Cyberpunk/Tech analogy (e.g., "Optimal GPU cooling conditions", "High thermal readings require underclocking", or "Clear skies optimize satellite telemetry").]
     """
     
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_DASHBOARD}:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     headers = {"Content-Type": "application/json"}
     
@@ -97,7 +97,7 @@ def generate_briefing(news, weather, activity):
     
     # Extract version from model string for the badge (e.g. gemini-3.1-flash-lite -> 3.1)
     try:
-        badge_version = re.search(r"gemini-(\d+\.\d+)", MODEL_DASHBOARD).group(1)
+        badge_version = re.search(r"gemini-(\d+\.\d+)", MODEL).group(1)
     except Exception:
         badge_version = "X.X"
         
