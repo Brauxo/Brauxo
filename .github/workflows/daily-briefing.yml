@@ -2,7 +2,7 @@ name: God Mode Daily Briefing
 
 on:
   schedule:
-    - cron: '0 5 * * *' # Every day at 5:00 AM UTC (7:00 AM Paris)
+    - cron: '17 3 * * *' # Every day at 3:17 AM UTC (5:17 AM Paris)
   workflow_dispatch: # Allows manual trigger
 
 permissions:
