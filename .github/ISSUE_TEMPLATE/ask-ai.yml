@@ -1,16 +1,16 @@
-name: System Query (AI Terminal)
-description: "Submit a query to Brauxo's Core AI"
-title: "[SYSTEM_QUERY] AI Terminal Execution"
+name: Ask AI Assistant
+description: "Ask a question about the repositories, data platforms, or AI architectures"
+title: "[Question] Profile Assistant Query"
 labels: ["question", "ai-chat"]
 body:
   - type: markdown
     attributes:
-      value: "### >_ [SYSTEM_TERMINAL] ACCESS GRANTED\n\nSubmit your query regarding Owen Braux's Data Platform architecture, Cloud infrastructure, or Artificial Intelligence projects. \n\n*Note: All valid queries and system responses are logged to the public README terminal.*"
+      value: "### 💬 Profile Assistant\n\nAsk a technical question regarding public repositories, architecture, cloud infrastructure, or data pipelines.\n\n*Responses are generated automatically by the profile agent and logged to the [README](https://github.com/Brauxo/Brauxo).*"
   - type: textarea
     id: question
     attributes:
-      label: ">> ENTER_QUERY"
-      description: "Syntax check: Keep it concise. Private data access is restricted."
-      placeholder: "e.g., What technologies did Owen use to build his Bitcoin Analytics Platform?"
+      label: "Your Question"
+      description: "Keep it focused on technical projects and open-source architecture."
+      placeholder: "e.g., What technologies are used in the Bitcoin Analytics pipeline?"
     validations:
       required: true

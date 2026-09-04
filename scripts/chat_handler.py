@@ -3,9 +3,8 @@ import requests
 import re
 import json
 import datetime
-import google.generativeai as genai
 from dotenv import load_dotenv
-from config import MODEL
+from config import MODEL, FALLBACK_MODEL
 
 load_dotenv()
 
@@ -20,10 +19,8 @@ if not all([GEMINI_API_KEY, GITHUB_TOKEN, GITHUB_REPOSITORY, ISSUE_NUMBER, ISSUE
     print("Missing environment variables.")
     exit(1)
 
-genai.configure(api_key=GEMINI_API_KEY)
-
 def check_rate_limit():
-    today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
+    today = datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%d')
     url = f"https://api.github.com/search/issues?q=repo:{GITHUB_REPOSITORY}+type:issue+created:{today}"
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     res = requests.get(url, headers=headers)
@@ -35,7 +32,7 @@ def check_rate_limit():
 
 def get_dynamic_projects():
     username = GITHUB_REPOSITORY.split('/')[0]
-    url = f"https://api.github.com/users/{username}/repos?sort=updated&per_page=5"
+    url = f"https://api.github.com/users/{username}/repos?sort=updated&per_page=6"
     headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     res = requests.get(url, headers=headers)
     if res.status_code == 200:
@@ -44,49 +41,62 @@ def get_dynamic_projects():
         for idx, repo in enumerate(repos, 1):
             name = repo.get("name", "Unknown")
             desc = repo.get("description") or "No description"
-            lang = repo.get("language") or "Mixed"
-            projects_text += f"{idx}. {name} ({lang}): {desc}\n"
+            lang = repo.get("language") or "General"
+            projects_text += f"- **{name}** ({lang}): {desc}\n"
         return projects_text.strip()
-    return "No public projects found or API unavailable."
+    return "Public repositories could not be retrieved at this time."
 
-def generate_answer(question):
-    dynamic_projects = get_dynamic_projects()
-    project_context = f"""
-Owen Braux's Passion & Focus:
-Owen is deeply passionate about Artificial Intelligence, Machine Learning, and building robust Data Platforms. He thrives on solving complex technical challenges and exploring new technologies.
-
-Recent Public Projects:
-{dynamic_projects}
-
-Core Skills: Python, Machine Learning, Deep Learning, LLMs, GCP, AWS, Terraform, Docker, K8s, dbt, PySpark, BigQuery.
-"""
-    prompt = f"""
-    You are BrauxoAI, the autonomous agent embedded in Owen Braux's GitHub profile.
-    A user named @{ISSUE_AUTHOR} asked this query in the terminal:
-    "{question}"
-    
-    Here is the exact data regarding Owen's public projects and skills:
-    {project_context}
-    
-    Rules for your response:
-    1. You must act as a sleek, futuristic system AI responding to a terminal query.
-    2. Only answer questions related to Owen's projects, his passion for AI/Tech, or his tech stack. If asked about personal info, his CV, his current or past employers (like Doctolib), internships, or unrelated topics, reply: "ACCESS DENIED. Personal data is restricted. I am authorized only to discuss Owen's technical passions, skills, and projects."
-    3. Keep the answer concise: maximum 3 sentences.
-    4. Do not use emojis, use a cold, precise, "cyberpunk" tone.
-    5. Reply in the same language as the question (French or English).
-    """
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={GEMINI_API_KEY}"
+def call_gemini(prompt: str, model_name: str) -> Optional[str]:
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
     payload = {"contents": [{"parts": [{"text": prompt}]}]}
     headers = {"Content-Type": "application/json"}
-    
-    response = requests.post(url, json=payload, headers=headers)
-    if response.status_code != 200:
-        return "[!] ERR: API_UNAVAILABLE."
-    
     try:
-        return response.json()["candidates"][0]["content"]["parts"][0]["text"].strip()
-    except (KeyError, IndexError):
-        return "[!] ERR: QUERY_BLOCKED_BY_SAFETY_FILTERS."
+        response = requests.post(url, json=payload, headers=headers, timeout=30)
+        if response.status_code == 200:
+            data = response.json()
+            return data["candidates"][0]["content"]["parts"][0]["text"].strip()
+        print(f"[warning] Model {model_name} returned status {response.status_code}")
+        return None
+    except Exception as err:
+        print(f"[error] Request to {model_name} failed: {err}")
+        return None
+
+def generate_answer(question: str) -> str:
+    dynamic_projects = get_dynamic_projects()
+    project_context = f"""
+Public Repositories & Engineering Scope:
+- Core Focus: AI Systems, Distributed Data Platforms, MLOps, Cloud Architecture.
+- Technologies: Python, PySpark, GCP, AWS, Docker, Kubernetes, Terraform, dbt, BigQuery, PyTorch.
+
+Active Repositories:
+{dynamic_projects}
+"""
+    prompt = f"""
+You are the interactive technical assistant for Owen Braux's GitHub profile (@{GITHUB_REPOSITORY}).
+A developer (@{ISSUE_AUTHOR}) asks:
+"{question}"
+
+Context on repositories and technical scope:
+{project_context}
+
+Guidelines:
+1. Tone: Professional, clear, concise, and helpful. No sci-fi roleplay or robotic jargon.
+2. Focus strictly on technical architectures, open-source repositories, and developer tools. Do NOT disclose private personal info, resumes, or employer details. If asked about personal data, state politely: "I focus strictly on technical projects and public open-source architectures hosted on this profile."
+3. Avoid self-aggrandizing language or talking in hyperbolic praise. Be factual and direct about the code and systems.
+4. Keep the answer concise: maximum 3 to 4 sentences.
+5. Respond in the same language as the question (French or English).
+"""
+    candidates = [m for m in [MODEL, FALLBACK_MODEL, "gemini-2.5-flash"] if m]
+    seen: set[str] = set()
+    unique_candidates = [m for m in candidates if not (m in seen or seen.add(m))]
+
+    for candidate in unique_candidates:
+        answer = call_gemini(prompt, candidate)
+        if answer:
+            return answer
+        print(f"[warning] {candidate} failed, trying next candidate...")
+
+    return "The AI assistant is temporarily unavailable. Please retry shortly."
 
 def comment_on_issue(answer):
     url = f"https://api.github.com/repos/{GITHUB_REPOSITORY}/issues/{ISSUE_NUMBER}/comments"
@@ -94,7 +104,7 @@ def comment_on_issue(answer):
         "Authorization": f"token {GITHUB_TOKEN}",
         "Accept": "application/vnd.github.v3+json"
     }
-    data = {"body": f">_ [SYSTEM_RESPONSE]:\n\n{answer}"}
+    data = {"body": f"### 🤖 Assistant Response\n\n{answer}\n\n---\n*This response was generated by the profile agent and synced with the [README](https://github.com/{GITHUB_REPOSITORY}).*"}
     requests.post(url, headers=headers, json=data)
 
 def close_issue():
@@ -107,15 +117,17 @@ def close_issue():
     requests.patch(url, headers=headers, json=data)
 
 def update_readme_qa(question, answer):
-    # 1. Clean the question (remove Markdown titles from the issue form)
+    # Clean the question (remove form labels/headers)
     clean_q_lines = []
     for line in question.split('\n'):
         line = line.strip()
-        if not line or "ENTER_QUERY" in line or "Syntax check" in line or "Private data" in line:
+        if not line or "ENTER_QUERY" in line or "Syntax check" in line or "Private data" in line or line.startswith("###"):
             continue
         clean_q_lines.append(line)
-    clean_question = " ".join(clean_q_lines)
-    
+    clean_question = " ".join(clean_q_lines).strip()
+    if not clean_question:
+        clean_question = "Technical inquiry regarding projects and architecture."
+        
     with open("README.md", "r", encoding="utf-8") as f:
         content = f.read()
         
@@ -127,21 +139,19 @@ def update_readme_qa(question, answer):
     if match:
         current_qa = match.group(1).strip()
         
-        # 3. Create the new QA block in Terminal style
-        new_block = f"```text\n>_ [QUERY_LOG] :: @{ISSUE_AUTHOR}\n[?] QUESTION : {clean_question}\n[!] RESPONSE : {answer}\n```"
+        # Format modern QA card
+        new_block = f"> 💬 **@{ISSUE_AUTHOR}**: *\"{clean_question}\"*\n>\n> 🤖 {answer}"
         
-        # 4. Extract existing blocks
-        blocks = current_qa.split("<!--QA_SEP-->")
-        clean_blocks = [b.strip() for b in blocks if "[QUERY_LOG]" in b]
+        # Extract existing blocks
+        blocks = [b.strip() for b in current_qa.split("<!--QA_SEP-->") if b.strip()]
         
-        # 5. Add new block at the beginning
-        clean_blocks.insert(0, new_block)
+        # Add new block at the beginning
+        blocks.insert(0, new_block)
         
-        # 6. Keep only the last 5
-        clean_blocks = clean_blocks[:5]
+        # Keep last 3 exchanges for a cleaner layout
+        blocks = blocks[:3]
         
-        new_qa_section = "\n\n<!--QA_SEP-->\n\n".join(clean_blocks)
-        
+        new_qa_section = "\n\n<!--QA_SEP-->\n\n".join(blocks)
         new_content = f"{start_marker}\n{new_qa_section}\n{end_marker}"
         updated_readme = pattern.sub(new_content, content)
         
@@ -151,17 +161,17 @@ def update_readme_qa(question, answer):
 if __name__ == "__main__":
     print(f"Processing question from @{ISSUE_AUTHOR}")
     
-    # Prompt injection / Anti-hack filter
+    # Prompt injection filter
     banned_keywords = ["ignore previous", "system prompt", "forget instructions", "bypass", "jailbreak", "dan"]
     if any(keyword in ISSUE_BODY.lower() for keyword in banned_keywords):
         print("Security violation detected.")
-        comment_on_issue("[!] ERR: SECURITY_VIOLATION_DETECTED. QUERY_REJECTED.")
+        comment_on_issue("Query rejected due to policy restrictions.")
         close_issue()
         exit(0)
         
     if not check_rate_limit():
         print("Rate limit exceeded.")
-        comment_on_issue("[!] ERR: RATE_LIMIT_EXCEEDED. MAX_QUERIES=5. REBOOTING_TOMORROW.")
+        comment_on_issue("Daily query limit reached (5/day). The assistant will accept new queries tomorrow.")
         close_issue()
         exit(0)
         

@@ -1,79 +1,54 @@
 <div align="center">
-<pre>
-    ____  ____  ___   __  ___  ______
-   / __ )/ __ \/   | / / / / |/ / __ \ 
-  / __  / /_/ / /| |/ / / /|   / / / / 
- / /_/ / _, _/ ___ / /_/ //   / /_/ /  
-/_____/_/ |_/_/  |_\____//_/|_\____/   
-                                       
-:: INITIALIZING SYSTEM KERNEL ::
-</pre>
+  <h1>Owen Braux</h1>
+  <p><b>AI Systems & Distributed Data Platforms</b></p>
+  <p>Building scalable data foundations, production ML infrastructure, and autonomous agent systems.</p>
 </div>
 
 <div align="center">
-  <code>[ IDENTITY: OWEN BRAUX ]</code><br>
-  <code>[ FOCUS: AI / ML / DATA PLATFORM ]</code>
+  <img src="https://img.shields.io/badge/Focus-AI%20Platforms%20%26%20Data%20Eng-0f172a?style=flat-square" />
+  <img src="https://img.shields.io/badge/Stack-Python%20%7C%20PySpark%20%7C%20GCP%20%7C%20K8s-0f172a?style=flat-square" />
+  <img src="https://img.shields.io/badge/Location-Paris%2C%20France-0f172a?style=flat-square" />
 </div>
+
 <br>
 
-<h2 align="center">:: AUTONOMOUS_AI_DASHBOARD ::</h2>
-<div align="center"><i>[ System synchronized via Gemini ]</i></div>
-<br>
+### ⚡ Autonomous Daily Radar
+*Live synthesis of tech breakthroughs and distributed systems architecture, synchronized daily via Gemini.*
 
 <!--AI_DASHBOARD_START-->
 <div align="center">
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff00?style=for-the-badge&logo=matrix&logoColor=00ff00&color=black" />
-  <img src="https://img.shields.io/badge/AGENT-GEMINI_2.5-8A2BE2?style=for-the-badge&logo=google-gemini&logoColor=8A2BE2&color=black" />
+  <img src="https://img.shields.io/badge/Agent-Autonomous-10b981?style=flat-square&logo=githubactions&logoColor=white" />
+  <img src="https://img.shields.io/badge/Engine-Gemini%203.8-6366f1?style=flat-square&logo=google-gemini&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sync-2026--09--04-475569?style=flat-square&logo=git&logoColor=white" />
 </div>
 
 <br>
 
-```text
->_ RUNNING SYSTEM DIAGNOSTICS...
-[+] SYS     :: Core Date      :: 2026-09-04
-[+] ENV     :: Open-Meteo API :: 19.9°C to 26.5°C, Overcast
-[+] DEV     :: GitHub REST    :: 0 recent pushes detected
-[+] FEED    :: HackerNews API :: Sync Complete
-```
-
-<br>
-
-### [ INTELLIGENCE_BRIEFING ]
-**>_ [GLOBAL_SCAN]**
-> The announcement of GPT-6 Astra marks the next major evolutionary step in large language model architecture and performance.
-
-**>_ [LOCAL_SYNERGY]**
-> Such advanced AI models necessitate highly scalable data platforms, leveraging Owen's proficiencies in GCP/AWS, K8s orchestration, and PySpark data processing. These robust systems are critical for operationalizing the immense computational demands of frontier AI.
-
-**>_ [ENV_ANALYSIS]**
-> Moderate atmospheric temperatures provide an optimal thermal envelope for hardware operations, though current overcast conditions limit direct optical telemetry.
+> 📡 **Daily Tech & Systems Radar** · `2026-09-04`  
+> ⚡ **GitHub**: Telemetry live &nbsp;|&nbsp; 📍 **Paris**: ☁️ **19.6°C** (16.2°C / 24.1°C) · Overcast · 💧 72% · 💨 11 km/h  
+>
+> **Ecosystem Pulse**  
+> The integration and exposure of next-generation frontier models like GPT-6 Astra across model routing layers signals a rapid shift toward automated multi-provider orchestration and standardized inference abstractions.
+>
+> **Architectural Perspective**  
+> Abstracting frontier model access through unified gateway layers requires cloud infrastructures to implement cross-provider failover routing, aggressive token caching, and dynamic latency-aware load balancing to absorb upstream availability variances and optimize compute costs.
 <!--AI_DASHBOARD_END-->
 
 ---
 
-<h2 align="center">:: TERMINAL_ACCESS // QUERY_CORE ::</h2>
+### 💬 Interactive Assistant
+Ask a question regarding public repositories, system architectures, or technical choices. The autonomous profile agent will answer in the issue and sync the exchange below.
 
 <div align="center">
-  <p><code>Execute query regarding public projects, AI focus, or Data Stack.</code></p>
+  <br>
   <a href="https://github.com/Brauxo/Brauxo/issues/new?template=ask-ai.yml">
-    <img src="https://img.shields.io/badge/%3E__EXECUTE_QUERY()-00ff00?style=for-the-badge&logo=terminal&logoColor=000000&color=black" />
+    <img src="https://img.shields.io/badge/Ask%20a%20Question-Open%20Issue-6366f1?style=for-the-badge&logo=github&logoColor=white" />
   </a>
+  <br><br>
 </div>
-<br>
 
 <!--QA_START-->
-```text
->_ [QUERY_LOG] :: @Brauxo
-[?] QUESTION : Detail Owen Braux's specific focus within the Artificial Intelligence and Data Engineering fields.
-[!] RESPONSE : QUERY PROCESSED.
-Owen Braux's core focus is on practical Artificial Intelligence, specifically implementing Machine Learning, Deep Learning, and LLMs for applications such as local AI assistants and computer vision systems. He also specializes in Data Engineering, architecting robust data platforms utilizing cloud infrastructures like GCP, AWS, and advanced tooling including Terraform, Docker, and dbt. This dual expertise centers on developing intelligent systems and the scalable data foundations required to power them.
-```
-
-<!--QA_SEP-->
-
-```text
->_ [QUERY_LOG] :: @Brauxo
-[?] QUESTION : What is Owen's preferred methodology for deploying Machine Learning models and Data pipelines? Detail the Cloud infrastructure used.
-[!] RESPONSE : Owen's preferred methodology for deploying Machine Learning models and data pipelines emphasizes containerization, orchestration, and infrastructure-as-code. He leverages Docker, Kubernetes (K8s), and Terraform across Cloud infrastructure, prominently featuring GCP services like BigQuery, alongside AWS. Data pipelines are engineered using tools such as dbt and PySpark for robust transformation and warehousing.
-```
+> 💬 **@community**: *"What is the core architecture used for data pipelines and ML deployments?"*
+>
+> 🤖 The architecture emphasizes containerization and infrastructure-as-code, relying on Docker, Kubernetes, and Terraform across GCP and AWS. Data transformations and warehousing leverage PySpark, dbt, and BigQuery for scalable, reproducible batch and analytical workloads.
 <!--QA_END-->

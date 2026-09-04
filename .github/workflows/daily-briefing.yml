@@ -1,9 +1,9 @@
-name: God Mode Daily Briefing
+name: Autonomous Daily Radar
 
 on:
   schedule:
-    - cron: '17 3 * * *' # Every day at 3:17 AM UTC (5:17 AM Paris)
-  workflow_dispatch: # Allows manual trigger
+    - cron: '17 3 * * *' # Every day at 3:17 AM UTC
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -32,5 +32,5 @@ jobs:
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[SYSTEM_UPDATE] :: Daily Intelligence Briefing"
+          commit_message: "chore(radar): update daily tech briefing"
           file_pattern: README.md

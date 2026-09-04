@@ -1,4 +1,4 @@
-name: AI Chat Handler
+name: AI Assistant Handler
 
 on:
   issues:
@@ -36,5 +36,5 @@ jobs:
       - name: Commit and Push README update
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[QUERY_LOG] :: Terminal access by @${{ github.event.issue.user.login }}"
+          commit_message: "chore(assistant): response to @${{ github.event.issue.user.login }}"
           file_pattern: README.md
