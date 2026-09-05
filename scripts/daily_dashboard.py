@@ -15,7 +15,7 @@ from typing import Optional
 import requests
 from dotenv import load_dotenv
 
-from config import FALLBACK_MODEL, MODEL
+from config import MODEL
 
 load_dotenv()
 
@@ -192,22 +192,12 @@ Strict Rules:
 [ARCHITECTURAL_INSIGHT]
 <1-2 sentences>
 """
-    candidates = [m for m in [MODEL, FALLBACK_MODEL, "gemini-2.5-flash"] if m]
-    # Deduplicate while preserving order
-    seen: set[str] = set()
-    unique_candidates = [m for m in candidates if not (m in seen or seen.add(m))]
-
-    ai_raw = None
-    active_model = unique_candidates[0]
-
-    for candidate in unique_candidates:
-        print(f"[info] Attempting synthesis with {candidate}...")
-        ai_raw = call_gemini(session, prompt, candidate)
-        if ai_raw:
-            active_model = candidate
-            print(f"[success] Response received from {candidate}")
-            break
-        print(f"[warning] {candidate} failed, checking next model...")
+    print(f"[info] Synthesizing digest with {MODEL}...")
+    ai_raw = call_gemini(session, prompt, MODEL)
+    if ai_raw:
+        print(f"[success] Response received from {MODEL}")
+    else:
+        print(f"[warning] {MODEL} did not return valid text, using baseline summary")
 
     pulse_text = "Vectorized query execution and specialized accelerator pipelines continue to redefine high-throughput data processing."
     insight_text = "Modern data architectures prioritize decoupling storage from compute to ensure cost efficiency and sub-second query performance at petabyte scale."
@@ -223,7 +213,7 @@ Strict Rules:
     current_date = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d")
     badge_date = current_date.replace("-", "--")
 
-    match = re.search(r"gemini-(\d+(?:\.\d+)?)", active_model)
+    match = re.search(r"gemini-(\d+(?:\.\d+)?)", MODEL)
     badge_version = match.group(1) if match else "Flash"
 
     return f"""
@@ -235,8 +225,7 @@ Strict Rules:
 
 <br>
 
-> 📡 **Daily Tech & Systems Radar** · `{current_date}`  
-> ⚡ **GitHub**: {activity} &nbsp;|&nbsp; 📍 **Paris**: {weather.format_line()}  
+> 📍 **Paris**: {weather.format_line()} &nbsp;|&nbsp; ⚡ **GitHub**: {activity}  
 >
 > **Ecosystem Pulse**  
 > {pulse_text}

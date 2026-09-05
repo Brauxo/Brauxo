@@ -28,8 +28,14 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/update_gemini_models.py
 
+      - name: Refresh Dashboard with new model
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/daily_dashboard.py
+
       - name: Commit and Push Model Update
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "[SYSTEM_MAINTENANCE] :: Auto-upgrade Gemini model"
+          commit_message: "chore(model): auto-upgrade Gemini model"
           file_pattern: "scripts/config.py README.md"

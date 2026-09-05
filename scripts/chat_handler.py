@@ -4,7 +4,7 @@ import re
 import json
 import datetime
 from dotenv import load_dotenv
-from config import MODEL, FALLBACK_MODEL
+from config import MODEL
 
 load_dotenv()
 
@@ -86,17 +86,8 @@ Guidelines:
 4. Keep the answer concise: maximum 3 to 4 sentences.
 5. Respond in the same language as the question (French or English).
 """
-    candidates = [m for m in [MODEL, FALLBACK_MODEL, "gemini-2.5-flash"] if m]
-    seen: set[str] = set()
-    unique_candidates = [m for m in candidates if not (m in seen or seen.add(m))]
-
-    for candidate in unique_candidates:
-        answer = call_gemini(prompt, candidate)
-        if answer:
-            return answer
-        print(f"[warning] {candidate} failed, trying next candidate...")
-
-    return "The AI assistant is temporarily unavailable. Please retry shortly."
+    answer = call_gemini(prompt, MODEL)
+    return answer or "The AI assistant is temporarily unavailable. Please retry shortly."
 
 def comment_on_issue(answer):
     url = f"https://api.github.com/repos/{GITHUB_REPOSITORY}/issues/{ISSUE_NUMBER}/comments"

@@ -1,6 +1,6 @@
 """
 Autonomous Gemini Model Scanner.
-Discovers, validates, and updates the latest stable Gemini Flash model endpoint in config.py.
+Discovers, validates, and updates the latest operational Gemini Flash model in config.py.
 """
 
 from __future__ import annotations
@@ -27,7 +27,10 @@ def test_model(session: requests.Session, model_name: str) -> bool:
     payload = {"contents": [{"parts": [{"text": "ping"}]}]}
     try:
         res = session.post(url, json=payload, headers={"Content-Type": "application/json"}, timeout=12)
-        return res.status_code == 200
+        if res.status_code == 200:
+            return True
+        print(f"[warning] Health-check for {model_name} returned HTTP {res.status_code}")
+        return False
     except Exception as err:
         print(f"[warning] Health-check for {model_name} failed: {err}")
         return False
@@ -39,7 +42,7 @@ def get_latest_working_model(session: requests.Session) -> str:
     try:
         res = session.get(url, timeout=10)
         if not res.ok:
-            print("[warning] Failed to fetch remote models list, falling back to gemini-3.7-flash.")
+            print("[warning] Failed to fetch remote models list, preserving default.")
             return "gemini-3.7-flash"
 
         models_data = res.json().get("models", [])
@@ -60,26 +63,32 @@ def get_latest_working_model(session: requests.Session) -> str:
             if test_model(session, model_name):
                 print(f"[success] Model verified: {model_name}")
                 return model_name
-            print(f"[warning] Candidate {model_name} unavailable, testing next fallback...")
+            print(f"[warning] Candidate {model_name} unavailable (503/error), checking next version...")
 
         return "gemini-3.7-flash"
+
     except Exception as err:
         print(f"[error] Model discovery failed: {err}")
         return "gemini-3.7-flash"
 
 
 def update_config(filepath: str, latest_model: str) -> bool:
-    """Update primary MODEL constant in config.py if changed."""
+    """Update MODEL constant in config.py."""
     try:
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read()
 
-        new_content = re.sub(r'MODEL\s*=\s*"[^"]+"', f'MODEL = "{latest_model}"', content)
+        new_content = re.sub(
+            r"^MODEL\s*=\s*\"[^\"]+\"",
+            f'MODEL = "{latest_model}"',
+            content,
+            flags=re.MULTILINE,
+        )
 
         if new_content != content:
             with open(filepath, "w", encoding="utf-8") as f:
                 f.write(new_content)
-            print(f"[success] Updated model in {filepath} -> {latest_model}")
+            print(f"[success] Updated {filepath} -> MODEL={latest_model}")
             return True
         return False
     except FileNotFoundError:
@@ -88,7 +97,7 @@ def update_config(filepath: str, latest_model: str) -> bool:
 
 
 def main() -> None:
-    print("[start] Checking for latest operational Gemini models...")
+    print("[start] Checking for latest operational Gemini model...")
     with requests.Session() as session:
         latest = get_latest_working_model(session)
         print(f"[info] Selected Model: {latest}")
