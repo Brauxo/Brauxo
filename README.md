@@ -19,12 +19,12 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Agent-Autonomous-10b981?style=flat-square&logo=githubactions&logoColor=white" />
   <img src="https://img.shields.io/badge/Engine-Gemini%203.6-6366f1?style=flat-square&logo=google-gemini&logoColor=white" />
-  <img src="https://img.shields.io/badge/Sync-2026--11--17-475569?style=flat-square&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/Sync-2026--11--18-475569?style=flat-square&logo=git&logoColor=white" />
 </div>
 
 <br>
 
-> 📍 **Paris**: ⛅ **17.1°C** (11.9°C / 17.2°C) · Partly cloudy · 💧 57% · 💨 26 km/h &nbsp;|&nbsp; ⚡ **GitHub**: 0 recent pushes detected  
+> 📍 **Paris**: ☁️ **14.9°C** (11.6°C / 15.2°C) · Overcast · 💧 63% · 💨 20 km/h &nbsp;|&nbsp; ⚡ **GitHub**: 0 recent pushes detected  
 >
 > **Ecosystem Pulse**  
 > Vectorized query execution and specialized accelerator pipelines continue to redefine high-throughput data processing.
